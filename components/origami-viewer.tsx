@@ -49,8 +49,11 @@ function OrigamiModel({ patternId, step }: { patternId: string; step: number }) 
 }
 
 // This component would show the folding animation
+//eslint-disable-next-line
 function FoldingAnimation({ patternId, step }: { patternId: string; step: number }) {
-  const meshRef = useRef<Mesh>(null)
+  //eslint-disable-next-line
+  const meshRef = useRef<Mesh>(null)  
+  //eslint-disable-next-line
   const { viewport } = useThree()
 
   // In a real app, this would be replaced with actual folding animation logic

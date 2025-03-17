@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Home() {
   const patterns = [
@@ -63,7 +64,7 @@ export default function Home() {
         {patterns.map((pattern) => (
           <Card key={pattern.id} className="overflow-hidden">
             <div className="aspect-video w-full overflow-hidden bg-muted">
-              <img
+              <Image
                 src={pattern.image || "/placeholder.svg"}
                 alt={pattern.name}
                 className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"

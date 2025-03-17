@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <strong>Ron Resch</strong> - Created numerous tessellation patterns with applications in architecture
               </li>
               <li>
-                <strong>Eric Gjerde</strong> - Author of "Origami Tessellations" who helped popularize the art form
+                <strong>Eric Gjerde</strong> - Author of &quot;Origami Tessellations&quot; who helped popularize the art form
               </li>
               <li>
                 <strong>Robert Lang</strong> - Developed computational algorithms for complex origami designs

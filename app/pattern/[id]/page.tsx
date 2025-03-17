@@ -9,9 +9,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { OrigamiViewer } from "@/components/origami-viewer"
 
+type Pattern = {
+  name: string
+  description: string
+  difficulty: string
+  steps: string[]
+  materials: string
+  tips: string[]
+}
 // This would come from a database in a real app
 const getPatternData = (id: string) => {
-  const patterns = {
+  const patterns: { [key: string]: Pattern } = {
     "triangle-grid": {
       name: "Triangle Grid",
       description:
@@ -83,7 +91,7 @@ const getPatternData = (id: string) => {
 export default function PatternPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const [currentStep, setCurrentStep] = useState(0)
-  const [pattern, setPattern] = useState<any>(null)
+  const [pattern, setPattern] = useState<Pattern | null>(null)
 
   useEffect(() => {
     setPattern(getPatternData(id))
